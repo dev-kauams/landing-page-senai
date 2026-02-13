@@ -3,6 +3,7 @@
 :root{
 
     --color-background: #080324;
+    --color-gray: #1a1a1a;
 
     --color-red: #F9003D;
     --color-purple: #6A00FF;
@@ -400,7 +401,6 @@ body {
           height: auto;
         }
       }
-
     }
   }
 }
@@ -450,5 +450,31 @@ body {
 
 
 
+@media (max-width: 768px) { 
 
+    .nav #menu-toggle {
+        display: block;
+    }
+
+    .nav .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: var(--color-red);
+        padding: 20px 0;
+        gap: 15px;
+        display: none;   /* começa escondido */
+    }
+
+    .nav .nav-menu.active {
+        display: flex;   /* aparece */
+    }
+
+
+    body header nav img {
+        width: 120px;
+    }
+}
 
